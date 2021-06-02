@@ -21,11 +21,6 @@ const beforeEach = async (to, from, next) => {
     next()
     return
   }
-  // 不需权限,直接放行,/error-xx等
-  if (to.meta.requiresAuth === false) {
-    next()
-    return
-  }
   // token不存在,跳转到login
   if (!storage.getStorage('token')) {
     next('/login')
@@ -34,11 +29,17 @@ const beforeEach = async (to, from, next) => {
   // 第一次进入系统需要获取权限状态和用户信息(刷新地址栏)
   if (store.state.isFirst) {
     // 将token保存在内存中
-    store.state.token = storage.getStorage('token')
+    let token = storage.getStorage('token')
+    store.commit('saveToken', token)
     // 用户信息查询
     // 权限查询
     await initUserInfo()
     store.commit('changeFirst', false)
+  }
+  // 不需权限,直接放行,/error-xx等
+  if (to.meta.requiresAuth === false) {
+    next()
+    return
   }
   // 路由跳转鉴别权限
   if (to.meta.permission && !store.state.permissions.includes(to.meta.permission)) {

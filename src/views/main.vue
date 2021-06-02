@@ -5,7 +5,7 @@
         <div class="aside-box">
           <div class="logo">
             <img :src="logoSrc">
-            <div class="sys-text">电动自行车后台管理系统</div>
+            <div class="sys-text">汽车电子标识发卡系统</div>
           </div>
           <layout-aside :startP="startP" :endP="endP" @getMoveDistance="getMoveDistance"></layout-aside>
         </div>

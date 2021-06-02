@@ -1,13 +1,9 @@
 import home from './home'
-import businessSet from './businessSet'
-import dataSearch from './dataSearch'
-import businessHandle from './businessHandle'
-import system from './system'
+import vip from './a_vip'
+import elec from './b_elec'
 
 export default [
   home,
-  businessSet,
-  dataSearch,
-  businessHandle,
-  system
+  vip,
+  elec
 ]
