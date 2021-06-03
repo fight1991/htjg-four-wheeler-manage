@@ -171,6 +171,14 @@ export default {
       let { eviId } = row
       this.currentId = eviId
       this.unbindVisible = true
+    },
+    routeToDetailPage (row) {
+      this.$tab.replace({
+        name: 'vip-carDetail',
+        query: {
+          id: row.eviId
+        }
+      })
     }
   }
 }
