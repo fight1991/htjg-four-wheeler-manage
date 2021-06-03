@@ -51,6 +51,7 @@ export const memberList = ({ data, page }) => {
 export const memberDetail = (data) => {
   return $businesss({
     url: '/user-center/user/getMemberDetail',
-    data
+    data,
+    globalLoading: true
   })
 }
