@@ -5,14 +5,14 @@ import { $post_user as $post } from '@/net/netInit'
 // 查询字典版本
 export const checkDictionaryVersion = (data) => {
   return $post({
-    url: '/data-dict/dict/batchGetDictVersionTime',
+    url: '/bmp-dict/dict/batchGetDictVersionTime',
     data
   })
 }
 // 按需查询字典
 export const getDictionaryData = (data, resultType = 'map') => {
   return $post({
-    url: '/data-dict/dict/batchGetDictDetail',
+    url: '/bmp-dict/dict/batchGetDictDetail',
     data: {
       dictNames: data,
       resultType

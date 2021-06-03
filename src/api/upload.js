@@ -14,7 +14,7 @@ export const upload_private = (uploadToken, file, accountId) => {
   formData.append('file', file)
   formData.append('accountId', accountId)
   return $upload({
-    url: '/service-oss/upload/uploadPrivate',
+    url: '/bmp-oss/upload/uploadPrivate',
     data: formData
   })
 }
@@ -24,7 +24,7 @@ export const upload_public = (uploadToken, file) => {
   formData.append('uploadToken', uploadToken)
   formData.append('file', file)
   return $upload({
-    url: '/service-oss/upload/uploadPublic',
+    url: '/bmp-oss/upload/uploadPublic',
     data: formData
   })
 }
