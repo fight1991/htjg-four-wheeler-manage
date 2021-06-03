@@ -57,7 +57,7 @@
 </template>
 <script>
 import { memberList } from '@/api/user'
-import detailDialog from './vipDetailDialog'
+import detailDialog from './components/vipDetailDialog'
 export default {
   components: {
     detailDialog

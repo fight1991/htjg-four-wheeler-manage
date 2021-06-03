@@ -32,5 +32,6 @@ export default {
 .box {
   display: inline-block;
   cursor: pointer;
+  margin: 0 5px;
 }
 </style>

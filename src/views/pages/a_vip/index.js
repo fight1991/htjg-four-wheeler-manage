@@ -21,7 +21,7 @@ export default {
       meta: {
         permission: '',
         title: '车辆管理',
-        component: () => import(/* webpackChunkName: "vip-car" */ '@/views/pages/a_vip/vip')
+        component: () => import(/* webpackChunkName: "vip-car" */ '@/views/pages/a_vip/car')
       }
     }, {
       path: '/bus/vip/points',
